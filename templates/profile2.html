@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Tone and Health Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Skin Tone and Health Analysis</h1>
+    <form id="analysisForm">
+        <h2>Skin Information</h2>
+        <label for="skinColor">Skin Color:</label>
+        <select id="skinColor" name="skinColor">
+            <option value="Fair">Fair</option>
+            <option value="Light">Light</option>
+            <option value="Medium">Medium</option>
+            <option value="Tan">Tan</option>
+            <option value="Deep">Deep</option>
+        </select>
+
+        <label for="sunReaction">Sun Reaction:</label>
+        <select id="sunReaction" name="sunReaction">
+            <option value="Burn">Burn</option>
+            <option value="Tan">Tan</option>
+            <option value="No Reaction">No Reaction</option>
+        </select>
+
+        <label for="undertone">Natural Undertone:</label>
+        <select id="undertone" name="undertone">
+            <option value="Cool">Cool</option>
+            <option value="Warm">Warm</option>
+            <option value="Neutral">Neutral</option>
+        </select>
+
+        <h2>Sleep Pattern</h2>
+        <label for="sleepHours">Average Sleep Hours:</label>
+        <input type="text" id="sleepHours" name="sleepHours" placeholder="e.g., 6-8 hours">
+
+        <label for="sleepQuality">Sleep Quality:</label>
+        <select id="sleepQuality" name="sleepQuality">
+            <option value="Good">Good</option>
+            <option value="Average">Average</option>
+            <option value="Poor">Poor</option>
+        </select>
+
+        <h2>Makeup Preferences</h2>
+        <label for="makeupPreference">Do you have specific makeup preferences?</label>
+        <select id="makeupPreference" name="makeupPreference">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="makeupDetails">If yes, list your preferences:</label>
+        <textarea id="makeupDetails" name="makeupDetails" placeholder="e.g., foundation shades, lipstick colors"></textarea>
+
+        <h2>Cultural or Regional Background</h2>
+        <label for="culturalBackground">Describe your cultural or regional background:</label>
+        <textarea id="culturalBackground" name="culturalBackground"></textarea>
+
+        <h2>Other Information</h2>
+        <label for="hydrationLevel">Hydration Level:</label>
+        <select id="hydrationLevel" name="hydrationLevel">
+            <option value="Well-hydrated">Well-hydrated</option>
+            <option value="Dehydrated">Dehydrated</option>
+        </select>
+
+        <label for="skincareRoutine">Do you follow a skincare routine?</label>
+        <select id="skincareRoutine" name="skincareRoutine">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="skincareDetails">If yes, briefly describe your routine:</label>
+        <textarea id="skincareDetails" name="skincareDetails"></textarea>
+
+        <button type="button" onclick="analyzeSkinTone()">Submit</button>
+        <a href="C:/Users/Student/Desktop/my_health_care_profile_app/templates/notice.html" class="button">
+            Notice
+        </a>
+
+    </form>
+
+    <div id="output" class="output"></div>
+
+    <script>
+        function analyzeSkinTone() {
+            const skinColor = document.getElementById("skinColor").value;
+            const skinToneCategory = skinColor === "Fair" || skinColor === "Light" 
+                ? "Light Skin Tone" 
+                : skinColor === "Medium" || skinColor === "Tan" 
+                ? "Medium Skin Tone" 
+                : "Dark Skin Tone";
+
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = `
+                <h2>Skin Tone Analysis Result</h2>
+                <p>Your skin tone category is: <strong>${skinToneCategory}</strong></p>
+            `;
+        }
+    </script>
+</body>
+</html>

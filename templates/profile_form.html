@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Profile Form</title>
+    <style>
+        /* Apply a background image */
+        body {
+            background-image: url('images.jpg'); /* Change the URL to your desired image */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center the form */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style the form */
+        form {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f8d7da; /* Light red for header */
+        }
+
+        label {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            display: block;
+            text-align: left;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;   
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        /* Add responsive design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            label {
+                font-size: 1rem;
+            }
+
+            input, select {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+
+            input[type="submit"] {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/submit_profile" method="POST">
+            <h1>Create Your Healthcare Profile</h1>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select><br>
+
+            <label for="height">Height (in cm):</label>
+            <input type="number" id="height" name="height" required><br>
+
+            <label for="weight">Weight (in kg):</label>
+            <input type="number" id="weight" name="weight" required><br>
+
+            <label for="blood_group">Blood Group:</label>
+            <input type="text" id="blood_group" name="blood_group" required><br>
+
+            <label for="allergies">Allergies:</label>
+            <input type="text" id="allergies" name="allergies"><br>
+
+            <label for="medical_conditions">Medical Conditions:</label>
+            <input type="text" id="medical_conditions" name="medical_conditions"><br>
+
+            <label for="diet">Diet Preference:</label>
+            <input type="text" id="diet" name="diet"><br>
+
+            <label for="activity">Activity Level:</label>
+            <input type="text" id="activity" name="activity"><br>
+
+            <label for="emergency_contact">Emergency Contact Name:</label>
+            <input type="text" id="emergency_contact" name="emergency_contact"><br>
+
+            <label for="emergency_contact_number">Emergency Contact Number:</label>
+            <input type="text" id="emergency_contact_number" name="emergency_contact_number"><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
