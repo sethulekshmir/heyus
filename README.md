@@ -107,7 +107,7 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
+InShot_20250126_111849385.mp4
 *Explain what the video demonstrates*
 
 # Additional Demos
