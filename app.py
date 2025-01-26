@@ -13,9 +13,13 @@ def profile2():
     return render_template('profile2.html')
 
 
-@app.route('/notice')
-def notice():
-    return render_template('notice.html')
+# @app.route('/notice')
+# def notice():
+#     return render_template('notice.html')
+
+@app.route('/choose')
+def choose():
+    return render_template('choose.html')
 
 # Route to handle form submission and display profile data
 @app.route('/submit_profile', methods=['POST'])
@@ -52,6 +56,8 @@ def submit_profile():
 
     # Render the profile_result.html template and pass the profile data
     return render_template('profile_result.html', profile=profile)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness Assistant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 10px 0;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Health & Wellness Assistant</h1>
+        <p>Please choose an option from the following:</p>
+        <ul class="options">
+            <li><button class="btn" onclick="displayInfo(1)">1. Cosmetics</button></li>
+            <li><button class="btn" onclick="displayInfo(2)">2. Allergy</button></li>
+            <li><button class="btn" onclick="displayInfo(3)">3. Other Health Issues</button></li>
+            <li><button class="btn" onclick="displayInfo(4)">4. Daily Tips</button></li>
+            <li><button class="btn" onclick="exitApp()">5. Exit</button></li>
+        </ul>
+        <div id="output" class="output"></div>
+    </div>
+
+    <script>
+        function displayInfo(option) {
+            const output = document.getElementById('output');
+            switch (option) {
+                case 1:
+                    output.innerHTML = `
+                        <h2>COSMETICS</h2>
+                        <ul>
+                            <li>Ensure you are using products suitable for your skin type.</li>
+                            <li>Avoid expired cosmetics to prevent skin reactions.</li>
+                            <li>Perform a patch test before trying new products.</li>
+                        </ul>`;
+                    break;
+                case 2:
+                    output.innerHTML = `
+                        <h2>ALLERGY</h2>
+                        <ul>
+                            <li>Identify triggers such as food, pollen, or cosmetics.</li>
+                            <li>Use antihistamines or prescribed medication if symptoms occur.</li>
+                            <li>Consult a doctor for severe or persistent allergies.</li>
+                        </ul>`;
+                    break;
+                case 3:
+                    output.innerHTML = `
+                        <h2>OTHER HEALTH ISSUES</h2>
+                        <ul>
+                            <li>For skin concerns like acne or rashes, consult a dermatologist.</li>
+                            <li>Stay hydrated and maintain a balanced diet to support overall health.</li>
+                            <li>Regularly monitor any persistent symptoms and seek medical advice.</li>
+                        </ul>`;
+                    break;
+                case 4:
+                    output.innerHTML = `
+                        <h2>DAILY TIPS</h2>
+                        <ul>
+                            <li>Drink at least 8 glasses of water daily.</li>
+                            <li>Follow a proper skincare routine, including cleansing and moisturizing.</li>
+                            <li>Protect your skin from sun damage by using sunscreen.</li>
+                            <li>Get 7-8 hours of quality sleep every night.</li>
+                        </ul>`;
+                    break;
+            }
+        }
+
+        function exitApp() {
+            const output = document.getElementById('output');
+            output.innerHTML = "<h2>Thank you for using the Health & Wellness Assistant. Stay healthy!</h2>";
+        }
+    </script>
+</body>
+</html>
