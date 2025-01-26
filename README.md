@@ -73,11 +73,11 @@ For Software:
 ![Screenshot1](templates\p2.PNG)
 *Add caption explaining what this shows*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2](![profile](https://github.com/user-attachments/assets/91d9e0b0-3af4-4836-a7c0-fdf77af8955d)
+landing page
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot3](![skin](https://github.com/user-attachments/assets/cb800ba1-ecbe-4fd5-8f8d-5205e016938a)
+second page
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
