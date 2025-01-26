@@ -109,8 +109,6 @@ For Hardware:
 # Video
 
 
-https://github.com/user-attachments/assets/628c95d9-e260-42c2-9c94-4db37767b074
-
 
 
 https://github.com/user-attachments/assets/f41d84d7-5f23-43b2-a1f6-79b769b2583a
